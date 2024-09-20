@@ -1,0 +1,11 @@
+.HeaderNav a,
+.MyName {
+  color: rgb(211, 208, 208);
+  text-decoration: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  width: fit-content;
+}
+.HeaderNav a:hover {
+  color: rgb(255, 221, 0);
+}

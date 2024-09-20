@@ -1,0 +1,9 @@
+.Content {
+  background-image: url("../../assets/images/body-bg.gif");
+  min-height: 60vh;
+}
+@media screen and (max-width: 750px) {
+  .Content {
+    padding: 0 10px;
+  }
+}

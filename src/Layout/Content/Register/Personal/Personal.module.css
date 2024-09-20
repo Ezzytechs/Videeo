@@ -1,0 +1,229 @@
+.personalPage {
+  display: flex;
+  height: 100%;
+  background-color: #f8f8f8;
+}
+
+.leftSection {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  position: sticky;
+  top: 0;
+  padding: 50px;
+  height: 90vh;
+}
+
+.leftSection img {
+  width: 70%;
+  height: auto;
+  max-height: 80vh;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .leftSection {
+    display: none;
+  }
+}
+
+.rightSection {
+  flex: 1;
+  padding: 40px;
+  background-color: #fff;
+}
+
+.form {
+  max-width: 400px;
+  margin: auto;
+}
+
+.userInfoForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup,
+.phoneGroup {
+  margin-bottom: 20px;
+}
+
+.weakPass {
+  border-color: red !important;
+}
+
+.error {
+  margin: 0;
+  color: red;
+}
+
+.highlightText {
+  color: red;
+  padding-top: 10px;
+}
+
+.text {
+  padding-top: 10px;
+}
+
+label {
+  font-size: 1em;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.formActions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formActions button {
+  padding: 15px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.backButton {
+  background-color: #ccc;
+}
+
+.submitButton {
+  background-color: #28a745;
+}
+
+.submitButton:disabled {
+  background-color: rgba(0, 128, 0, 0.274);
+  cursor: not-allowed;
+}
+
+.genderGroup {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.genderGroup label {
+  display: flex !important;
+  align-items: center;
+}
+
+.genderGroup input {
+  margin-right: 5px;
+  accent-color: green;
+  width: 15px;
+  height: 15px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.user {
+  margin-right: 10px;
+  color: #aaa;
+}
+
+.profilePreview {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.sameGroup {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.sameGroup .formGroup {
+  width: 48%;
+}
+
+@media (max-width: 768px) {
+  .sameGroup {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .sameGroup .formGroup {
+    width: 100%;
+  }
+}
+
+.phoneGroup {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row !important;
+  flex-shrink: 1;
+}
+
+.countrySelect {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  appearance: none;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+
+.tel input {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .phoneGroup {
+    flex-direction: column;
+  }
+
+  .countrySelect,
+  .tel {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .rightSection {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rightSection {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rightSection {
+    padding: 10px;
+  }
+
+  .userInfoForm .formActions {
+    flex-direction: column;
+  }
+
+  .userInfoForm .formActions button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,51 @@
+.IconDiv {
+  padding: 6px 10px;
+  padding-top: 12px;
+  display: none;
+}
+.IconDiv > div {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: all 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 810px) {
+  .IconDiv {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    cursor: pointer;
+    z-index: 900;
+  }
+  /* Rotate first bar */
+  .Bar1 {
+    transform: translate(0, 12px) rotate(-45deg);
+  }
+
+  /* Fade out the second bar */
+  .Bar2 {
+    opacity: 0;
+  }
+
+  /* Rotate last bar */
+  .Bar3 {
+    transform: translate(0, -6px) rotate(46deg);
+  }
+  .CloseDiv {
+    position: fixed;
+  }
+}
+@media screen and (max-width: 350px) {
+  .Icon {
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+  }
+  .IconDiv {
+    margin-top: 5px;
+  }
+}

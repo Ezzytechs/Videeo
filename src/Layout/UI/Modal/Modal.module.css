@@ -1,0 +1,13 @@
+.ModalContainer {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    20deg,
+    hsla(132, 10%, 10%, 0.801) 40%,
+    hwb(0 13% 87% / 0.76) 100%
+  );
+}

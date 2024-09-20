@@ -1,0 +1,46 @@
+.headerNav {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.MyName {
+  color: rgb(211, 208, 208);
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.MyName:hover {
+  cursor: pointer;
+  color: white;
+}
+.NavCSS {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.NavCSS a {
+  margin: 0 30px;
+}
+@media screen and (max-width: 900px) {
+  .NavCSS a {
+    margin: 0px !important;
+  }
+}
+/* @media screen and (max-width: 750px) {
+  .NavCSS a {
+    font-size: 1em;
+  }
+} */
+@media screen and (max-width: 810px) {
+  .NavCSS a {
+    display: none;
+  }
+  .HireButtonDiv {
+    display: none;
+  }
+}

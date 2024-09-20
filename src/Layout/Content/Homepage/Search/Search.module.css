@@ -1,0 +1,26 @@
+.searchContainer {
+  margin-right: 40px;
+  width: 80%;
+  max-width: 300px;
+  float: right;
+}
+
+.searchContainer input[type="text"] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width: 70%;
+}
+
+.searchContainer button {
+  padding: 6px 10px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.searchContainer button:hover {
+  background: #ccc;
+}
