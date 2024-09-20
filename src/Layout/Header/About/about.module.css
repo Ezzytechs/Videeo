@@ -1,0 +1,33 @@
+.AboutMe {
+  padding-top: 60px;
+  display: grid;
+  max-width: 800px;
+  margin: auto;
+  place-items: center;
+}
+
+.AboutMe h2 {
+  font-size: 2.5em;
+  color: rgb(255, 221, 0);
+  margin-bottom: 10px;
+  text-align: center;
+}
+.AboutMe p {
+  margin-top: 10px;
+  font-size: 3em;
+  max-width: 500px;
+  text-align: center;
+}
+@media screen and (max-width: 810px) {
+  .AboutMe {
+    padding-top: 10px;
+    width: 100%;
+  }
+  .AboutMe h2 {
+    font-size: 2em;
+  }
+  .AboutMe p {
+    width: 100%;
+    font-size: 2em;
+  }
+}

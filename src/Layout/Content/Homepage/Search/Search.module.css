@@ -24,3 +24,11 @@
 .searchContainer button:hover {
   background: #ccc;
 }
+@media screen and (max-width: 500px) {
+  .searchContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0;
+  }
+}

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import Spinner from "../../UI/Spinner/Spinner";
-import "./Login.scss";
+import classes from "./Login.module.css";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -19,13 +19,10 @@ const LoginPage = () => {
     setLoading(true);
     try {
       const loginData = { phone: phoneNumber, password: password };
-      const res = await axios.post(
-        "https://www.dev.farmwarehouse.ng/api/users/login",
-        loginData
-      );
+      const res = await axios.post("apiurl", loginData);
       setLoading(false);
       if (res.data) {
-        navigate("/verification");
+        //do something
       }
     } catch (err) {
       setLoading(false);
@@ -35,52 +32,52 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="login-page">
-      <div className="right-section">
-        <div className="contents">
-          <div className="back-button">
+    <div className={classes.loginPage}>
+      <div className={classes.rightSection}>
+        <div className={classes.contents}>
+          <div className={classes.backButton}>
             ← <Link to={"/"}>Back home</Link>
           </div>
           <h2>Welcome back!</h2>
           <form onSubmit={handleLogin}>
-            <div className="form-group">
+            <div className={classes.formGroup}>
               <label>Email address / Phone number</label>
               <input
                 type="text"
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
-                className={error?.phoneError ? "input-error" : ""}
+                className={error?.phoneError ? classes.inputError : ""}
                 placeholder="+2348163542395"
               />
               {error?.phoneError && (
-                <p className="error-text">
+                <p className={classes.errorText}>
                   This phone number is not verified. Log in with email instead.
                 </p>
               )}
             </div>
-            <div className="form-group">
+            <div className={classes.formGroup}>
               <label>Password</label>
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className={error?.passwordError ? "input-error" : ""}
+                className={error?.passwordError ? classes.inputError : ""}
                 placeholder="Password"
               />
               {error?.passwordError && (
-                <p className="error-text">Wrong password</p>
+                <p className={classes.errorText}>Wrong password</p>
               )}
             </div>
-            <div className="form-options">
-              <label>
-                <input type="checkbox" /> Remember for 30 days
-              </label>
+            <div className={classes.formOptions}>
               <a href="/forgot-password">Forgot password</a>
             </div>
-            <button type="submit" disabled={loading} className="login-button">
+            <button
+              type="submit"
+              disabled={loading}
+              className={classes.loginButton}>
               {loading ? <Spinner /> : "Submit"}
             </button>
-            <p className="signup-text">
+            <p className={classes.signupText}>
               Don’t have an account? <Link href="/register">Sign up</Link>
             </p>
           </form>

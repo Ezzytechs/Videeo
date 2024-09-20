@@ -5,19 +5,19 @@ import { Link } from "react-router-dom";
 const Navigations = (props) => {
   const links = [
     { name: "Movies", link: "/", image: "" },
-    { name: "Shows", link: "/", image: "" },
+    { name: "TV Shows", link: "/", image: "" },
     { name: "Signup", link: "/signup", image: "" },
     { name: "Login", link: "/login", image: "" },
   ].map((link) => {
-    return <MyLink key={link.name} to={link.name} name={link.name}></MyLink>;
+    return <MyLink key={link.name} link={link.link} name={link.name}></MyLink>;
   });
   const headerClass = [props.CSSstyle, classes.HeaderNav].join(" ");
   return (
     <>
-      <div className={headerClass}>
+      <div className={classes.Navigation}>
         {" "}
         {props.children}
-        <div>{links}</div>
+        <div className={headerClass}>{links}</div>
       </div>
     </>
   );

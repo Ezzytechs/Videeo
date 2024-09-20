@@ -1,6 +1,9 @@
 .Footers {
   width: 100%;
   text-align: center;
+  color: white;
+  padding: 40px 0;
+  background-color: black;
 }
 /* .Remarks{
     color:white;

@@ -1,0 +1,38 @@
+.SubNavigation {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 60px;
+  width: 100%;
+  max-width: 800px;
+}
+.ItemName {
+  font-size: 2em;
+  padding-left: 20px;
+}
+.ItemLinks {
+  display: flex;
+  gap: 30px;
+}
+.ItemLinks h6 {
+  font-size: 0.9em;
+  border-radius: 8px;
+  padding: 5px 12px;
+  border: 2px solid white;
+  margin-bottom: 10px;
+  margin-top: 8px;
+}
+.ItemLinks h6:hover {
+  background: rgb(167, 145, 3);
+}
+@media screen and (max-width: 900px) {
+  .Movies {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .SubNavigation {
+    gap: 10px;
+    justify-content: center;
+  }
+}

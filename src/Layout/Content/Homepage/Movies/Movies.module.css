@@ -1,8 +1,12 @@
+.MoviesC {
+  padding-top: 30px;
+}
 .MoviesContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 40px;
+  padding: 30px;
 }
 .Movies {
   width: 30%;
@@ -11,8 +15,79 @@
   align-items: center;
   justify-content: center;
 }
+.ImagePlayOverLay {
+  position: relative;
+  width: 100%;
+  place-items: center;
+}
+.PlayOverlay {
+  position: absolute;
+  opacity: 0;
+  display: grid;
+  place-items: center;
+  transform: translateY(-10%);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.582);
+  transition: transform 0.2s ease-in-out;
+}
+.PlayOverlay h4 {
+  border: 2px solid white;
+  padding: 4px;
+}
+.PlayOverlay a {
+  text-decoration: none;
+  color: white;
+}
 
 .Movies img {
-  width: 40%;
+  width: 100%;
   height: auto;
+}
+.Movies:hover .PlayOverlay {
+  transform: translateY(0%);
+  opacity: 1;
+  /* display: block; */
+}
+.Title {
+  font-size: 1.4em;
+}
+.TitleYear h3 {
+  margin: 0;
+}
+.TitleYear,
+.ResolutionDuration {
+  padding-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+.DurationRatings h6 {
+  margin: 0;
+}
+.DurationRatings {
+  display: flex;
+  width: 80%;
+  justify-content: flex-end;
+  gap: 40px;
+}
+.Resolution {
+  border: 2px solid white;
+  padding: 2px;
+}
+@media screen and (max-width: 900px) {
+  .Movies {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .Movies {
+    width: 70%;
+    margin: auto;
+  }
+  .TitleYear,
+  .ResolutionDuration {
+    justify-content: flex-start;
+  }
 }

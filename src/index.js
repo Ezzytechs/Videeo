@@ -1,11 +1,14 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+import { SearchProvider } from "./Contexts/Search";
 import App from "./App";
 import "./index.css";
 const app = (
   <BrowserRouter>
-    <App />
+    <SearchProvider>
+      <App />
+    </SearchProvider>
   </BrowserRouter>
 );
 const domNode = document.getElementById("root");
